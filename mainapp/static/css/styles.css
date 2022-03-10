@@ -24,7 +24,7 @@ header {
 }
 
 #logotipo {
-    width: 70%;
+    width: 75%;
     height: 140px;
     margin: 0 auto;
 }
@@ -116,7 +116,7 @@ nav ul li a:hover {
 
 #content {
     width: 1212px;
-    height: 223em;
+    height: 95%;
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -125,7 +125,7 @@ nav ul li a:hover {
 .box {
     background: #B8DCEB;
     width: 95%;
-    height: 220em;
+    height: 95%;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
