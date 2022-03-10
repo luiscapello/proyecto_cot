@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+
+</head>
+
+<body>
+
+    <!-- Cabecera de la Pagina -->
+    <header>
+        <div id="logotipo">
+            <!-- logo -->
+            <img src="{% static 'img/logo2.png' %}" alt="logo uyeda">
+            <h1>Solicitud de Cotización</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            {% if user.email %}
+            <li>
+                <a href="{% url 'index' %}">Inicio</a>
+            </li>
+            {% comment  %}
+            {% for page in pages %}
+            <li>
+                <a href="{% url 'page' page.2 %}">{{page.1}}</a>
+            </li>
+            {% endfor %}
+            {% endcomment %}
+            <li>
+                <a href="{% url 'form' %}">Cotización nueva</a>
+            </li>
+            <li>
+                <a href="{% url 'cotizaciones' %}">Cotizaciónes</a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Cerrar Sesión</a>
+            </li>
+            {% else %} {% comment %}
+            <li>
+                <a href="{% url 'register' %}">Registro</a>
+            </li> {% endcomment %}
+            <li>
+                <a href="{% url 'login' %}">Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+            <strong> Contenido del bloque </strong> {% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        <i>
+            Uyeda Inductrial de Mexico &copy; Creado por Luis Capello
+        </i>
+    </footer>
+
+</body>
+
+</html>

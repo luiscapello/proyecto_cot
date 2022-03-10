@@ -1,0 +1,138 @@
+{% extends 'layouts/layout.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+<!--<h1 class = "title">{{title}}</h1>-->
+<hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;"> {% if user.email %}
+<hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+
+<h1 class="content">Solicitud de cotización flexografía </h1>
+
+<hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+<h2 class="content">{{request.user.first_name}} {{user.last_name}}</h2>
+
+<form class="" action="">
+    <div class="form-cot">
+        <div class="cot-head">
+            <label for="fecha">Fecha</label>
+            <input type="fecha" name="fecha" />
+
+            <label for="tipo">Tipo</label>
+            <input type="text" name="inputname" value="Nueva" readonly>
+            <label for="fecha">Folio</label>
+            <input type="text" name="folio" />
+            <label for="cliente"># Cliente</label>
+            <input type="text" name="cliente" />
+            <label for="nom-clie">Cliente</label>
+            <input type="text" name="nom-clie" />
+            <label for="solicita">Solicita</label>
+            <input type="text" name="inputname" value="{{request.user.first_name}} {{user.last_name}}" readonly>
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="cotizacion">Cotización</label>
+            <input type="text" name="cotizacion" />
+            <label for="fecha">Código Uyeda</label>
+            <input type="text" name="cod_uyeda" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="descripcion">Descripción</label>
+            <input type="text" name="descripcion" />
+            <label for="variante">Variantes</label>
+            <input type="text" name="variante" />
+            <label for="desaroll">Desarollo (mm)</label>
+            <input type="text" name="desarollo" />
+            <label for="eje">Eje (mm)</label>
+            <input type="text" name="eje" />
+            <label for="salia">Salida</label>
+            <input type="text" name="salida" />
+            <label for="fecha"># Suaje</label>
+            <input type="text" name="suaje" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="sustrato">Sustrato</label>
+            <input type="text" name="sustrato" />
+            <label for="adhesivo">Adhesivo</label>
+            <input type="text" name="adhesivo" />
+            <label for="respaldo">Respaldo</label>
+            <input type="text" name="desarollo" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="tin-frenta">Tintas Frente</label>
+            <input type="text" name="tin-frente" />
+            <label for="tin-adhesivo">Tintas Adhesivo</label>
+            <input type="text" name="tin-adhesivo" />
+            <label for="tin-respaldo">Tinas Respaldo</label>
+            <input type="text" name="tin-respaldo" />
+            <label for="tipo-tinta">Tipo Tinta</label>
+            <input type="text" name="tipo-tinta" />
+            <label for="trminado">Terminado</label>
+            <input type="text" name="terminado" />
+            <label for="especialidad">Especialidad</label>
+            <input type="text" name="especialidad" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Tipo de Empaque</option>
+                        <option value="1">Caja</option>
+                        <option value="2">Bolsa</option>
+                        <option value="3">Caja y Bolsa</option>
+                      </select>
+            <label for="entrega"># Entregas</label>
+            <input type="text" name="entrega" />
+            <label for="lugar">Lugar de Entrega</label>
+            <input type="text" name="lugar" />
+            <label for="carta-color">Cartas Color</label>
+            <input type="text" name="carta-color" />
+            <label for="tipo">Tipo</label>
+            <input type="text" name="tipo" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="velocidad">Velocidad</label>
+            <input type="text" name="velocidad" />
+            <label for="prueba">Prueba Especial</label>
+            <input type="text" name="prueba" />
+            <label for="envase">Material Envase</label>
+            <input type="text" name="envase" />
+            <label for="prod-envasar">Producto a Envasar</label>
+            <input type="text" name="prod-envasar" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="vol-anual">Vol Anual</label>
+            <input type="text" name="vol-anual" />
+            <label for="precio">Precio Objetivo</label>
+            <input type="text" name="precio" />
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <div>
+            <label for="tintas">Tintas</label>
+            <input type="text" name="tintas" placeholder="1">
+            <input type="text" name="tintas" placeholder="2">
+            <input type="text" name="tintas" placeholder="3">
+            <input type="text" name="tintas" placeholder="4">
+            <input type="text" name="tintas" placeholder="5">
+            <input type="text" name="tintas" placeholder="6">
+            <input type="text" name="tintas" placeholder="7">
+            <input type="text" name="tintas" placeholder="8">
+            <input type="text" name="tintas" placeholder="9">
+            <input type="text" name="tintas" placeholder="10">
+        </div>
+        <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
+        <dir>
+            <label for="notas">Notas</label>
+            <textarea name="notas" id="" cols="30" rows="10"></textarea>
+        </dir>
+
+
+
+
+    </div>
+</form>
+
+{% else %}
+<h2 class="content">Inicia sesión en el sistema</h2>
+
+{% endif %} {% endblock %}
