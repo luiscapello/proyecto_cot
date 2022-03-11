@@ -158,12 +158,18 @@
                             <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <strong>This is the third item's accordion body.</strong>
-                                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                                <option selected>Tipo de Empaque</option>
-                                                <option value="1">Caja</option>
-                                                <option value="2">Bolsa</option>
-                                                <option value="3">Caja y Bolsa</option>
-                                            </select>
+                            
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Tipo de Empaque
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li><button class="dropdown-item" type="button">Caja</button></li>
+                                            <li><button class="dropdown-item" type="button">Bolsa</button></li>
+                                            <li><button class="dropdown-item" type="button">Caja y Bolsa</button></li>
+                                        </ul>
+                                    </div>
+
                                     <label for="entrega"># Entregas</label>
                                     <input type="text" name="entrega" />
                                     <label for="lugar">Lugar de Entrega</label>
