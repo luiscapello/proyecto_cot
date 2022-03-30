@@ -1,18 +1,20 @@
 {% extends 'layouts/layout.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
 <h1>{{title}}</h1>
 
-{% if messages %} {% for message in messages %}
-<div class="alert alert-warning">
-    {{message}}
-</div>
-{% endfor %} {% endif %}
+    {% if messages %} 
+        {% for message in messages %}
+            <div class="alert alert-warning">
+                {{message}}
+            </div>
+        {% endfor %} 
+    {% endif %}
 
 <div class="box2">
     <form method="post" action="">
 
         <div class="logo-header"></div>
 
-        {% csrf_token %}
+       {% csrf_token %}
 
         <label for="username">Introduce tu numero de Empleado</label>
         <input type="text" name="username" />
