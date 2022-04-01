@@ -33,34 +33,34 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
-                                                <label for="fecha">Fecha</label>
-                                                <input type="fecha" name="fecha" />
+                                                <label for="date">Fecha</label>
+                                                <input type="date" name="date" />
                                             </div>
                                             <div class="col">
-                                                <label for="tipo">Tipo</label>
-                                                <input type="text" name="tipo" value="Nueva" readonly>
+                                                <label for="typeco">Tipo</label>
+                                                <input type="text" name="typeco" value="Nueva" readonly>
                                             </div>
                                             <div class="col">
                                                 <label for="folio">Folio</label>
                                                 <input type="text" name="folio" />
                                             </div>
                                             <div class="col">
-                                                <label for="cliente"># Cliente</label>
-                                                <input type="text" name="cliente" />
+                                                <label for="customerCode"># Cliente</label>
+                                                <input type="text" name="customerCode" />
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-3">
-                                                <label for="nom-clie">Cliente</label>
-                                                <input type="text" name="nom-clie" />
+                                                <label for="customers">Cliente</label>
+                                                <input type="text" name="customers" />
                                             </div>
                                             <div class="col-3">
-                                                <label for="prensa">Prensa</label>
-                                                <input type="text" name="prensa" />
+                                                <label for="press">Prensa</label>
+                                                <input type="text" name="press" />
                                             </div>
                                             <div class="col-5">
-                                                <label for="solicita">Solicita</label>
-                                                <input type="text" name="colicita" value="{{request.user.first_name}} {{user.last_name}}" readonly>
+                                                <label for="request">Solicita</label>
+                                                <input type="text" name="request" value="{{request.user.first_name}} {{user.last_name}}" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -76,10 +76,10 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="cotizacion">Cotización</label>
-                                    <input type="text" name="cotizacion" />
-                                    <label for="cod-uyeda">Código Uyeda</label>
-                                    <input type="text" name="cod-uyeda" />
+                                    <label for="quote">Cotización</label>
+                                    <input type="text" name="quote" />
+                                    <label for="codeUyeda">Código Uyeda</label>
+                                    <input type="text" name="codeUyeda" />
                                 </div>
                             </div>
                         </div>
@@ -92,16 +92,16 @@
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="descripcion">Descripción</label>
-                                    <input type="text" name="descripcion" />
-                                    <label for="variante">Variantes</label>
-                                    <input type="text" name="variante" />
-                                    <label for="desarollo">Desarollo (mm)</label>
-                                    <input type="text" name="desarollo" />
-                                    <label for="eje">Eje (mm)</label>
-                                    <input type="text" name="eje" />
-                                    <label for="salia">Salida</label>
-                                    <input type="text" name="salida" />
+                                    <label for="description">Descripción</label>
+                                    <input type="text" name="description" />
+                                    <label for="variant">Variantes</label>
+                                    <input type="text" name="variant" />
+                                    <label for="development">Desarollo (mm)</label>
+                                    <input type="text" name="development" />
+                                    <label for="axis">Eje (mm)</label>
+                                    <input type="text" name="axis" />
+                                    <label for="output">Salida</label>
+                                    <input type="text" name="output" />
                                     <label for="suaje"># Suaje</label>
                                     <input type="text" name="suaje" />
                                 </div>
@@ -116,12 +116,12 @@
                             <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="sustrato">Sustrato</label>
-                                    <input type="text" name="sustrato" />
-                                    <label for="adhesivo">Adhesivo</label>
-                                    <input type="text" name="adhesivo" />
-                                    <label for="respaldo">Respaldo</label>
-                                    <input type="text" name="respaldo" />
+                                    <label for="substrate">Sustrato</label>
+                                    <input type="text" name="substrate" />
+                                    <label for="adhesive">Adhesivo</label>
+                                    <input type="text" name="adhesive" />
+                                    <label for="backup">Respaldo</label>
+                                    <input type="text" name="backup" />
                                 </div>
                             </div>
                         </div>
@@ -134,18 +134,18 @@
                             <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="tin-frenta">Tintas Frente</label>
-                                    <input type="text" name="tin-frente" />
-                                    <label for="tin-adhesivo">Tintas Adhesivo</label>
-                                    <input type="text" name="tin-adhesivo" />
-                                    <label for="tin-respaldo">Tinas Respaldo</label>
-                                    <input type="text" name="tin-respaldo" />
-                                    <label for="tipo-tinta">Tipo Tinta</label>
-                                    <input type="text" name="tipo-tinta" />
-                                    <label for="trminado">Terminado</label>
-                                    <input type="text" name="terminado" />
-                                    <label for="especialidad">Especialidad</label>
-                                    <input type="text" name="especialidad" />
+                                    <label for="inkFront">Tintas Frente</label>
+                                    <input type="text" name="inkFront" />
+                                    <label for="inkAdhesive">Tintas Adhesivo</label>
+                                    <input type="text" name="inkAdhesive" />
+                                    <label for="inkBackup">Tinas Respaldo</label>
+                                    <input type="text" name="inkBackup" />
+                                    <label for="typeInk">Tipo Tinta</label>
+                                    <input type="text" name="typeInk" />
+                                    <label for="finished">Terminado</label>
+                                    <input type="text" name="finished" />
+                                    <label for="specialty">Especialidad</label>
+                                    <input type="text" name="specialty" />
                                 </div>
                             </div>
                         </div>
@@ -169,14 +169,14 @@
                                         </ul>
                                     </div>
 
-                                    <label for="entrega"># Entregas</label>
-                                    <input type="text" name="entrega" />
-                                    <label for="lugar">Lugar de Entrega</label>
-                                    <input type="text" name="lugar" />
-                                    <label for="carta-color">Cartas Color</label>
-                                    <input type="text" name="carta-color" />
-                                    <label for="tipo">Tipo</label>
-                                    <input type="text" name="tipo" />
+                                    <label for="delivery"># Entregas</label>
+                                    <input type="text" name="delivery" />
+                                    <label for="place">Lugar de Entrega</label>
+                                    <input type="text" name="place" />
+                                    <label for="letterColor">Cartas Color</label>
+                                    <input type="text" name="letterColor" />
+                                    <label for="typeDelivery">Tipo</label>
+                                    <input type="text" name="typeDelivery" />
                                 </div>
                             </div>
                         </div>
@@ -189,14 +189,14 @@
                             <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingseven" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="velocidad">Velocidad</label>
-                                    <input type="text" name="velocidad" />
-                                    <label for="prueba">Prueba Especial</label>
-                                    <input type="text" name="prueba" />
-                                    <label for="envase">Material Envase</label>
-                                    <input type="text" name="envase" />
-                                    <label for="prod-envasar">Producto a Envasar</label>
-                                    <input type="text" name="prod-envasar" />
+                                    <label for="speed">Velocidad</label>
+                                    <input type="text" name="speed" />
+                                    <label for="test">Prueba Especial</label>
+                                    <input type="text" name="test" />
+                                    <label for="packaging">Material Envase</label>
+                                    <input type="text" name="packaging" />
+                                    <label for="prodpackaging">Producto a Envasar</label>
+                                    <input type="text" name="prodpackaging" />
                                 </div>
                             </div>
                         </div>
@@ -209,10 +209,10 @@
                             <div id="collapseeight" class="accordion-collapse collapse" aria-labelledby="headingeight" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="vol-anual">Vol. Anual</label>
+                                    <label for="annual">Vol. Anual</label>
                                     <input type="text" name="vol-anual" />
-                                    <label for="precio">Precio Objetivo</label>
-                                    <input type="text" name="precio" />
+                                    <label for="price">Precio Objetivo</label>
+                                    <input type="text" name="price" />
                                 </div>
                             </div>
                         </div>
@@ -225,17 +225,17 @@
                             <div id="collapsenine" class="accordion-collapse collapse" aria-labelledby="headingnine" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="tintas">Tintas</label>
-                                    <input type="text" name="tintas" placeholder="1">
-                                    <input type="text" name="tintas" placeholder="2">
-                                    <input type="text" name="tintas" placeholder="3">
-                                    <input type="text" name="tintas" placeholder="4">
-                                    <input type="text" name="tintas" placeholder="5">
-                                    <input type="text" name="tintas" placeholder="6">
-                                    <input type="text" name="tintas" placeholder="7">
-                                    <input type="text" name="tintas" placeholder="8">
-                                    <input type="text" name="tintas" placeholder="9">
-                                    <input type="text" name="tintas" placeholder="10">
+                                    <label for="ink">Tintas</label>
+                                    <input type="text" name="ink1" placeholder="1">
+                                    <input type="text" name="ink2" placeholder="2">
+                                    <input type="text" name="ink3" placeholder="3">
+                                    <input type="text" name="ink4" placeholder="4">
+                                    <input type="text" name="ink5" placeholder="5">
+                                    <input type="text" name="ink6" placeholder="6">
+                                    <input type="text" name="ink7" placeholder="7">
+                                    <input type="text" name="ink8" placeholder="8">
+                                    <input type="text" name="ink9" placeholder="9">
+                                    <input type="text" name="ink10" placeholder="10">
                                 </div>
                             </div>
                         </div>
@@ -243,8 +243,8 @@
 
                     <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
                     <dir>
-                        <label for="notas">Notas</label>
-                        <textarea name="notas" id="" cols="30" rows="10"></textarea>
+                        <label for="note">Notas</label>
+                        <textarea name="note" id="" cols="30" rows="10"></textarea>
                     </dir>
 
                     <!-- Button trigger modal -->
