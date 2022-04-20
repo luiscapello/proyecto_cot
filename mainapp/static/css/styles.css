@@ -113,7 +113,8 @@ nav ul li a:hover {
 
 @media (min-width: 576px) {
     body {
-        background-color: #000080;
+        /*background-color: #7FB3D5;*/
+        background-image: radial-gradient(circle, #3e7fc6, #0092cf, #00a3ce, #00b3c5, #00c0b7, #00c0b7, #00c0b7, #00c0b7, #00b3c5, #00a3ce, #0092cf, #3e7fc6);
     }
 }
 
