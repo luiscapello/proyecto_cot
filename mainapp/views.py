@@ -1,7 +1,9 @@
 import email
+from django.http import HttpResponse
 from django.shortcuts import redirect, render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from mainapp.forms import RegisterForm
+from mainapp.models import Cotizacion
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 #from django.shortcuts import render_to_response
@@ -21,6 +23,14 @@ def formulario(request):
     return render(request, 'mainapp/form.html', {
         'title': 'Solicitud de Cotización'
     })
+
+def save_form(request):
+
+    formulario
+
+    return HttpResponse("Cotizacion Guardada")
+
+
 
 def cotizaciones(request):
 
