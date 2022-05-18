@@ -2,10 +2,11 @@ import email
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from mainapp.forms import RegisterForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-#from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response
+from mainapp.forms import RegisterForm
+
 
 
 
@@ -24,7 +25,7 @@ def Formulario(request):
     })
 
 def save_form(request):
-    
+
     if request.method == 'POST':
 
         date = request.POST['date']
