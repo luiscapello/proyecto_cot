@@ -123,7 +123,7 @@ def save_form(request):
         )
 
         formulario.save()
-        return HttpResponse("Cotizacion Guardada")
+        #return HttpResponse("Cotizacion Guardada")
 
     else:
         return HttpResponse("<h2> No se Guardo la Cotización </h2>")
