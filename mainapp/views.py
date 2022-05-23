@@ -35,7 +35,7 @@ def save_form(request):
         customers = request.POST['customers']
         press =	request.POST['press']
         request	= request.POST['request']
-        quote =	request.POST['quote']
+        quotation =	request.POST['quotation']
         codeUyeda = request.POST['codeUyeda']
         description	= request.POST['description']
         variant	= request.POST['variant']
@@ -82,7 +82,7 @@ def save_form(request):
             customers = customers,
             press = press,
             request = request,
-            quote = quote,
+            quotation = quotation,
             codeUyeda = codeUyeda,
             description	= description,
             variant	= variant,
@@ -123,7 +123,7 @@ def save_form(request):
         )
 
         formulario.save()
-        #return HttpResponse("Cotizacion Guardada")
+        return HttpResponse("Cotizacion Guardada")
 
     else:
         return HttpResponse("<h2> No se Guardo la Cotización </h2>")
