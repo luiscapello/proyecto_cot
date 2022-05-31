@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 #from django.shortcuts import render
 from mainapp.forms import RegisterForm
+from mainapp.models import Cotizacion
 
 
 
@@ -23,6 +24,60 @@ def Formulario(request):
     return render(request, 'mainapp/form.html', {
         'title': 'Solicitud de Cotización'
     })
+
+def crear_cotizacion(request):
+
+    cotizacion = Cotizacion(
+
+            date = '25/05/2022',
+            typeCo = 'nueva',
+            folio = '2514',
+            customerCode = '',
+            customers = '',
+            press = '',
+            request = '',
+            quotation = '',
+            codeUyeda = '',
+            description	= '',
+            variant	= '',
+            development	= '',
+            axis = axis,
+            output = output,
+            suaje = suaje,
+            substrate = substrate,
+            adhesive = adhesive,
+            backup = backup,
+            inkFront = inkFront,
+            inkAdhesive	= inkAdhesive,
+            inkBackup = inkBackup,
+            typeInk	= typeInk,
+            finished = finished,
+            specialty = specialty,
+            delivery = delivery,
+            place = place,
+            letterColor	= letterColor,
+            typeDelivery = typeDelivery,
+            speed = speed,
+            test = test,
+            packaging = packaging,
+            prodpackaging = prodpackaging,
+            annual = annual,
+            price = price,
+            ink1 = ink1,
+            ink2 = ink2,
+            ink3 = ink3,
+            ink4 = ink4,
+            ink5 = ink5,
+            ink6 = ink6,
+            ink7 = ink7,
+            ink8 = ink8,
+            ink9 = ink9,
+            ink10 = ink10,
+            note = note,
+    )
+    cotizacion.save()
+
+    return HttpResponse("Cotizacion creada")
 
 def save_form(request):
 
@@ -126,7 +181,7 @@ def save_form(request):
         return HttpResponse("Cotizacion Guardada")
 
     else:
-        return HttpResponse("<h2> No se Guardo la Cotización </h2>")
+        return HttpResponse("<h2> No se Guardo la Cotización </h2>") 
 
 
 
