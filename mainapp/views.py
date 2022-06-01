@@ -21,13 +21,8 @@ def index(request):
         'title': 'Inicio'
     })
 
-def Formulario(request):
 
-    return render(request, 'mainapp/form.html', {
-        'title': 'Solicitud de Cotización'
-    })
-
-def crear_cotizacion(request):
+def cotizacion(request):
 
     cotizacion = Cotizacion(
 
@@ -81,6 +76,65 @@ def crear_cotizacion(request):
 
     return HttpResponse(f"Cotizacion creada: <strong>{cotizacion.folio}</strong> - {cotizacion.customers}")
 
+def save_cotizacion(request):
+
+    cotizacion = Cotizacion(
+
+            typeCo = 'nueva',
+            folio = '2515',
+            customerCode = '5416',
+            customers = 'capello',
+            press = '1',
+            request = '1',
+            quotation = '1',
+            codeUyeda = '1',
+            description	= 'wsd',
+            variant	= '4',
+            development	= '145',
+            axis = '1',
+            output = '14',
+            suaje = 'refe',
+            substrate = 'erfe',
+            adhesive = 'jjo',
+            backup = 'backup',
+            inkFront = '1',
+            inkAdhesive	= '1',
+            inkBackup = '2',
+            typeInk	= 'typeInk',
+            finished = 'finished',
+            specialty = 'specialty',
+            delivery = 'delivery',
+            place = 'place',
+            letterColor	= 'letterColor',
+            typeDelivery = 'typeDelivery',
+            speed = '15',
+            test = 'test',
+            packaging = 'packaging',
+            prodpackaging = 'prodpackaging',
+            annual = '2055',
+            price = '215',
+            ink1 = '1',
+            ink2 = '2',
+            ink3 = '3',
+            ink4 = '4',
+            ink5 = '5',
+            ink6 = '6',
+            ink7 = '7',
+            ink8 = '8',
+            ink9 = '9',
+            ink10 = '10',
+            note = 'note',
+    )
+    cotizacion.save()
+
+    return HttpResponse(f"Cotizacion creada: <strong>{cotizacion.folio}</strong> - {cotizacion.customers}")
+
+
+def Formulario(request):
+
+    return render(request, 'mainapp/form.html', {
+        'title': 'Solicitud de Cotización'
+    })
 
 # def save_form(request):
 
