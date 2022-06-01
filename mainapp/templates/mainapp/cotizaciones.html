@@ -19,7 +19,11 @@
     
         <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;"> 
 
-        
+        <ul>
+            {% for cotizacion in Cotizaciones %}
+                <li>{{cotizacion.id}}.{{cotizacion.customers}}</li>
+            {% endfor %}
+        </ul>
 
     {% else %}
         <h2 class="content">Inicia sesión en el sistema</h2>

@@ -51,9 +51,9 @@ class Cotizacion(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     note = models.TextField()
 
-    class Meta:
-        verbose_name = "Cotizacion"
-        verbose_name_plural = "Cotizaciones"
+    # class Meta:
+    #     verbose_name = "Cotizacion"
+    #     verbose_name_plural = "Cotizaciones"
 
-    def __str__(self):
-        return self.folio
+    # def __str__(self):
+    #     return self.folio
