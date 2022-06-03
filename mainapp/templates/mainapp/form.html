@@ -19,7 +19,7 @@
                 <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
                 <!--<h2 class="content">{{request.user.first_name}} {{user.last_name}}</h2>-->
 
-                <form  method="POST" >
+                <form action="{% url 'save' %}"  method="GET" >
                     {% csrf_token %}
 
                     <div class="accordion" id="accordionExample">
@@ -160,7 +160,7 @@
                             <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
 
-                                    <div class="dropdown">
+                                    {% comment %} <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                             Tipo de Empaque
                                         </button>
@@ -169,7 +169,7 @@
                                             <li><button class="dropdown-item" type="button">Bolsa</button></li>
                                             <li><button class="dropdown-item" type="button">Caja y Bolsa</button></li>
                                         </ul>
-                                    </div>
+                                    </div> {% endcomment %}
 
                                     <label for="delivery"># Entregas</label>
                                     <input type="text" name="delivery" />

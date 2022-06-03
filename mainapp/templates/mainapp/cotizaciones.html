@@ -21,7 +21,7 @@
 
         <ul>
             {% for cotizacion in Cotizaciones %}
-                <li>{{cotizacion.id}}.{{cotizacion.customers}}</li>
+                <li>{{request.cotizacion.id}}. {{cotizacion.customers}}</li>
             {% endfor %}
         </ul>
 
