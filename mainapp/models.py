@@ -10,7 +10,7 @@ class Cotizacion(models.Model):
     customers  = models.CharField(max_length = 50)
     press = models.CharField(max_length = 25)
     request = models.CharField(max_length = 50)
-    quotation = models.PositiveSmallIntegerField()
+    coti = models.PositiveSmallIntegerField()
     codeUyeda = models.PositiveSmallIntegerField()
     description = models.CharField(max_length = 100)
     variant = models.CharField(max_length = 50)

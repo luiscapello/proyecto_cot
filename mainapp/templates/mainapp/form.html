@@ -62,7 +62,7 @@
                                             </div>
                                             <div class="col-5">
                                                 <label for="request">Solicita</label>
-                                                <input type="text" name="request" value="{{request.user.first_name}} {{user.last_name}}" readonly>
+                                                <input type="text" name="request" >
                                             </div>
                                         </div>
                                     </div>
@@ -78,8 +78,8 @@
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
-                                    <label for="quotation">Cotización</label>
-                                    <input type="text" name="quotation" />
+                                    <label for="coti">Cotización</label>
+                                    <input type="text" name="coti" />
                                     <label for="codeUyeda">Código Uyeda</label>
                                     <input type="text" name="codeUyeda" />
                                 </div>
@@ -249,13 +249,13 @@
                         <textarea name="note" id="" cols="20" rows="10"></textarea>
                     </dir>
 
-                    <!-- Button trigger modal -->
+                    {% comment %} <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Guardar Cotizacion
-                    </button>
+                    </button> {% endcomment %}
 
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    {% comment %} <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -274,7 +274,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                     <hr style="border: 3px solid #666; border-radius: 300px/10px; height: 0px; text-align: center;">
                 </form>
 

@@ -32,7 +32,7 @@ def cotizacion(request):
             customers = 'capello',
             press = '1',
             request = '1',
-            quotation = '1',
+            coti = '1',
             codeUyeda = '1',
             description	= 'wsd',
             variant	= '4',
@@ -79,52 +79,54 @@ def cotizacion(request):
 
 def save_cotizacion(request):
 
-    if request.method == 'GET':
+    if request.method == 'POST':
 
-        typeCo = request.GET['typeCo']
-        folio = request.GET['folio']
-        customerCode = request.GET['customerCode']
-        customers = request.GET['customers']
-        press =	request.GET['press']
-        request	= request.GET['request']
-        quotation =	request.GET['quotation']
-        codeUyeda = request.GET['codeUyeda']
-        description	= request.GET['description']
-        variant	= request.GET['variant']
-        development	= request.GET['development']
-        axis = request.GET['axis']
-        output = request.GET['output']
-        suaje =	request.GET['suaje']
-        substrate = request.GET['substrate']
-        adhesive = request.GET['adhesive']
-        backup = request.GET['backup']
-        inkFront = request.GET['inkFront']
-        inkAdhesive	= request.GET['inkAdhesive']
-        inkBackup = request.GET['inkBackup']
-        typeInk	= request.GET['typeInk']
-        finished = request.GET['finished']
-        specialty =	request.GET['specialty']
-        delivery = request.GET['delivery']
-        place =	request.GET['place']
-        letterColor	= request.GET['letterColor']
-        typeDelivery = request.GET['typeDelivery']
-        speed =	request.GET['speed']
-        test = request.GET['test']
-        packaging =	request.GET['packaging']
-        prodpackaging =	request.GET['prodpackaging']
-        annual = request.GET['annual']
-        price =	request.GET['price']
-        ink1 = request.GET['ink1']
-        ink2 = request.GET['ink2']
-        ink3 = request.GET['ink3']
-        ink4 = request.GET['ink4']
-        ink5 = request.GET['ink5']
-        ink6 = request.GET['ink6']
-        ink7 = request.GET['ink7']
-        ink8 = request.GET['ink8']
-        ink9 = request.GET['ink9']
-        ink10 = request.GET['ink10']
-        note = request.GET['note']
+        typeCo = request.POST['typeCo']
+        
+        folio = request.POST['folio']
+        
+        customerCode = request.POST['customerCode']
+        customers = request.POST['customers']
+        press =	request.POST['press']
+        request	= request.POST['request']
+        coti =	request.POST["coti"]
+        codeUyeda = request.POST['codeUyeda']
+        description	= request.POST['description']
+        variant	= request.POST['variant']
+        development	= request.POST['development']
+        axis = request.POST['axis']
+        output = request.POST['output']
+        suaje =	request.POST['suaje']
+        substrate = request.POST['substrate']
+        adhesive = request.POST['adhesive']
+        backup = request.POST['backup']
+        inkFront = request.POST['inkFront']
+        inkAdhesive	= request.POST['inkAdhesive']
+        inkBackup = request.POST['inkBackup']
+        typeInk	= request.POST['typeInk']
+        finished = request.POST['finished']
+        specialty =	request.POST['specialty']
+        delivery = request.POST['delivery']
+        place =	request.POST['place']
+        letterColor	= request.POST['letterColor']
+        typeDelivery = request.POST['typeDelivery']
+        speed =	request.POST['speed']
+        test = request.POST['test']
+        packaging =	request.POST['packaging']
+        prodpackaging =	request.POST['prodpackaging']
+        annual = request.POST['annual']
+        price =	request.POST['price']
+        ink1 = request.POST['ink1']
+        ink2 = request.POST['ink2']
+        ink3 = request.POST['ink3']
+        ink4 = request.POST['ink4']
+        ink5 = request.POST['ink5']
+        ink6 = request.POST['ink6']
+        ink7 = request.POST['ink7']
+        ink8 = request.POST['ink8']
+        ink9 = request.POST['ink9']
+        ink10 = request.POST['ink10']
+        note = request.POST['note']
 
         cotizacion1 = Cotizacion(
             typeCo = typeCo,
@@ -133,7 +135,7 @@ def save_cotizacion(request):
             customers = customers,
             press = press,
             request = request,
-            quotation = quotation,
+            coti = coti,
             codeUyeda = codeUyeda,
             description	= description,
             variant	= variant,
@@ -177,8 +179,9 @@ def save_cotizacion(request):
         return HttpResponse(f"Cotizacion creada: <strong>{cotizacion1.folio}</strong> - {cotizacion1.customers}")
     
     else:
+        print("hola")
         return HttpResponse("<h2> Nose ha podido guardar la cotización </h2>")
-
+        
     
 
 
