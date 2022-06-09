@@ -23,49 +23,38 @@
                     {% csrf_token %}
 
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <strong>Datos Generales</strong>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col">
-                                                <label for="date ">Fecha</label>
-                                                <input type="text" name="date" value= "{% now "d/m/y" %}" readonly />
-                                            </div>
-                                            <div class="col">
-                                                <label for="typeCo">Tipo</label>
-                                                <input type="text" name="typeCo" value="Nueva" readonly>
-                                            </div>
-                                            <div class="col">
-                                                <label for="folio">Folio</label>
-                                                <input type="text" name="folio" />
-                                            </div>
-                                            <div class="col">
-                                                <label for="customerCode"># Cliente</label>
-                                                <input type="text" name="customerCode" />
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <label for="customers">Cliente</label>
-                                                <input type="text" name="customers" />
-                                            </div>
-                                            <div class="col-3">
-                                                <label for="press">Prensa</label>
-                                                <input type="text" name="press" />
-                                            </div>
-                                            <div class="col-5">
-                                                <label for="request">Solicita</label>
-                                                <input type="text" name="request" >
-                                            </div>
-                                        </div>
-                                    </div>
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="date ">Fecha</label>
+                                    <input type="text" name="date" value= "{% now "d/m/y" %}" readonly />
+                                </div>
+                                <div class="col">
+                                    <label for="typeCo">Tipo</label>
+                                    <input type="text" name="typeCo" value="Nueva" readonly>
+                                </div>
+                                <div class="col">
+                                    <label for="folio">Folio</label>
+                                    <input type="text" name="folio" />
+                                </div>
+                                <div class="col">
+                                    <label for="customerCode"># Cliente</label>
+                                    <input type="text" name="customerCode" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="customers">Cliente</label>
+                                    <input type="text" name="customers" />
+                                </div>
+                                <div class="col-3">
+                                    <label for="press">Prensa</label>
+                                    <input type="text" name="press" />
+                                </div>
+                                <div class="col-5">
+                                    <label for="request">Solicita</label>
+                                    <input type="text" name="request" value = "{{request.user.first_name}} {{user.last_name}}" readonly >
                                 </div>
                             </div>
                         </div>
