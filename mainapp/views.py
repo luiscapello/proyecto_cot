@@ -23,7 +23,7 @@ def index(request):
 
 def cotizacion(request):
 
-    cotizacion1 = Cotizacion(
+    cotizacion = Cotizacion(
 
             #date = '25/05/2022',
             typeCo = 'nueva',
@@ -71,7 +71,7 @@ def cotizacion(request):
             ink10 = '10',
             note = 'note',
     )
-    cotizacion1.save()
+    cotizacion.save()
 
     return HttpResponse(f"Cotizacion creada: <strong>{cotizacion1.folio}</strong> - {cotizacion1.customers}")
 
@@ -82,14 +82,12 @@ def save_cotizacion(request):
     if request.method == 'POST':
 
         typeCo = request.POST['typeCo']
-        
         folio = request.POST['folio']
-        
         customerCode = request.POST['customerCode']
         customers = request.POST['customers']
         press =	request.POST['press']
-        request	= request.POST['request']
-        coti =	request.POST["coti"]
+        request = request.POST['request']
+        coti = request.POST['coti']
         codeUyeda = request.POST['codeUyeda']
         description	= request.POST['description']
         variant	= request.POST['variant']
@@ -128,7 +126,7 @@ def save_cotizacion(request):
         ink10 = request.POST['ink10']
         note = request.POST['note']
 
-        cotizacion1 = Cotizacion(
+        cotizacion = Cotizacion(
             typeCo = typeCo,
             folio = folio,
             customerCode = customerCode,
@@ -174,7 +172,7 @@ def save_cotizacion(request):
             ink10 = ink10,
             note = note,
         )
-        cotizacion1.save()
+        cotizacion.save()
 
         return HttpResponse(f"Cotizacion creada: <strong>{cotizacion1.folio}</strong> - {cotizacion1.customers}")
     

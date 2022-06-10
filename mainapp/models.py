@@ -6,7 +6,6 @@ class Cotizacion(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     typeCo = models.CharField(max_length = 25)
     folio = models.IntegerField(unique=True)
-    #folio = models.PositiveSmallIntegerField(unique = True)
     customerCode = models.PositiveSmallIntegerField()
     customers  = models.CharField(max_length = 50)
     press = models.CharField(max_length = 25)

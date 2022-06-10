@@ -32,29 +32,29 @@
                                 </div>
                                 <div class="col">
                                     <label for="typeCo">Tipo</label>
-                                    <input type="text" name="typeCo" value="Nueva" readonly>
+                                    <input id = "typeCo" type="text" name="typeCo" value="Nueva" readonly>
                                 </div>
                                 <div class="col">
                                     <label for="folio">Folio</label>
-                                    <input type="text" name="folio" />
+                                    <input id="folio" type="text" name="folio" required="true"/>
                                 </div>
                                 <div class="col">
                                     <label for="customerCode"># Cliente</label>
-                                    <input type="text" name="customerCode" />
+                                    <input id="customerCode" type="text" name="customerCode" required="true"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-3">
                                     <label for="customers">Cliente</label>
-                                    <input type="text" name="customers" />
+                                    <input id="customers" type="text" name="customers" required="true"/>
                                 </div>
                                 <div class="col-3">
                                     <label for="press">Prensa</label>
-                                    <input type="text" name="press" />
+                                    <input id="press" type="text" name="press" required="true" />
                                 </div>
                                 <div class="col-5">
                                     <label for="request">Solicita</label>
-                                    <input type="text" name="request" value = "{{request.user.first_name}} {{user.last_name}}" readonly >
+                                    <input id="request" type="text" name="request" value = "{{request.user.first_name}} {{user.last_name}}" readonly required="true" >
                                 </div>
                             </div>
                         </div>
@@ -68,9 +68,9 @@
                                 <div class="accordion-body">
                                     
                                     <label for="coti">Cotización</label>
-                                    <input type="text" name="coti" />
+                                    <input id="coti" type="text" name="coti" required="true"/>
                                     <label for="codeUyeda">Código Uyeda</label>
-                                    <input type="text" name="codeUyeda" />
+                                    <input id="codeUyeda" type="text" name="codeUyeda" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -84,17 +84,17 @@
                                 <div class="accordion-body">
                                     
                                     <label for="description">Descripción</label>
-                                    <input type="text" name="description" />
+                                    <input id="description" type="text" name="description" required="true"/>
                                     <label for="variant">Variantes</label>
-                                    <input type="text" name="variant" />
+                                    <input id="variant" type="text" name="variant" required="true"/>
                                     <label for="development">Desarollo (mm)</label>
-                                    <input type="text" name="development" />
+                                    <input id="development" type="text" name="development" required="true"/>
                                     <label for="axis">Eje (mm)</label>
-                                    <input type="text" name="axis" />
+                                    <input id="axis" type="text" name="axis" required="true"/>
                                     <label for="output">Salida</label>
-                                    <input type="text" name="output" />
+                                    <input id="output" type="text" name="output" required="true"/>
                                     <label for="suaje"># Suaje</label>
-                                    <input type="text" name="suaje" />
+                                    <input id="suaje" type="text" name="suaje" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -108,11 +108,11 @@
                                 <div class="accordion-body">
                                     
                                     <label for="substrate">Sustrato</label>
-                                    <input type="text" name="substrate" />
+                                    <input id="substrate" type="text" name="substrate" required="true"/>
                                     <label for="adhesive">Adhesivo</label>
-                                    <input type="text" name="adhesive" />
+                                    <input id="adhesive" type="text" name="adhesive" required="true"/>
                                     <label for="backup">Respaldo</label>
-                                    <input type="text" name="backup" />
+                                    <input id="backup" type="text" name="backup" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -126,17 +126,17 @@
                                 <div class="accordion-body">
                                     
                                     <label for="inkFront">Tintas Frente</label>
-                                    <input type="text" name="inkFront" />
+                                    <input id="inkFront" type="text" name="inkFront" required="true"/>
                                     <label for="inkAdhesive">Tintas Adhesivo</label>
-                                    <input type="text" name="inkAdhesive" />
+                                    <input id="inkAdhesive" type="text" name="inkAdhesive" required="true"/>
                                     <label for="inkBackup">Tinas Respaldo</label>
-                                    <input type="text" name="inkBackup" />
+                                    <input id="inkBackup" type="text" name="inkBackup" required="true"/>
                                     <label for="typeInk">Tipo Tinta</label>
-                                    <input type="text" name="typeInk" />
+                                    <input id="typeInk" type="text" name="typeInk" required="true"/>
                                     <label for="finished">Terminado</label>
-                                    <input type="text" name="finished" />
+                                    <input id="finished" type="text" name="finished" required="true"/>
                                     <label for="specialty">Especialidad</label>
-                                    <input type="text" name="specialty" />
+                                    <input id="specialty" type="text" name="specialty" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -161,13 +161,13 @@
                                     </div> {% endcomment %}
 
                                     <label for="delivery"># Entregas</label>
-                                    <input type="text" name="delivery" />
+                                    <input id="delivery" type="text" name="delivery" required="true"/>
                                     <label for="place">Lugar de Entrega</label>
-                                    <input type="text" name="place" />
+                                    <input id="place" type="text" name="place" required="true"/>
                                     <label for="letterColor">Cartas Color</label>
-                                    <input type="text" name="letterColor" />
+                                    <input id="letterColor" type="text" name="letterColor" required="true"/>
                                     <label for="typeDelivery">Tipo</label>
-                                    <input type="text" name="typeDelivery" />
+                                    <input id="typeDelivery" type="text" name="typeDelivery" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -181,13 +181,13 @@
                                 <div class="accordion-body">
                                     
                                     <label for="speed">Velocidad</label>
-                                    <input type="text" name="speed" />
+                                    <input id="speed" type="text" name="speed" required="true"/>
                                     <label for="test">Prueba Especial</label>
-                                    <input type="text" name="test" />
+                                    <input id="test" type="text" name="test" required="true"/>
                                     <label for="packaging">Material Envase</label>
-                                    <input type="text" name="packaging" />
+                                    <input id="packaging" type="text" name="packaging" required="true"/>
                                     <label for="prodpackaging">Producto a Envasar</label>
-                                    <input type="text" name="prodpackaging" />
+                                    <input id="prodpackaging" type="text" name="prodpackaging" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -201,9 +201,9 @@
                                 <div class="accordion-body">
                                     
                                     <label for="annual">Vol. Anual</label>
-                                    <input type="text" name="vol-anual" />
+                                    <input id="annual" type="text" name="vol-anual" required="true"/>
                                     <label for="price">Precio Objetivo</label>
-                                    <input type="text" name="price" />
+                                    <input id="price" type="text" name="price" required="true"/>
                                 </div>
                             </div>
                         </div>
@@ -217,16 +217,16 @@
                                 <div class="accordion-body">
                                     
                                     <label for="ink">Tintas</label>
-                                    <input type="text" name="ink1" placeholder="1">
-                                    <input type="text" name="ink2" placeholder="2">
-                                    <input type="text" name="ink3" placeholder="3">
-                                    <input type="text" name="ink4" placeholder="4">
-                                    <input type="text" name="ink5" placeholder="5">
-                                    <input type="text" name="ink6" placeholder="6">
-                                    <input type="text" name="ink7" placeholder="7">
-                                    <input type="text" name="ink8" placeholder="8">
-                                    <input type="text" name="ink9" placeholder="9">
-                                    <input type="text" name="ink10" placeholder="10">
+                                    <input type="text" name="ink1" placeholder="1" required="true">
+                                    <input type="text" name="ink2" placeholder="2" required="true">
+                                    <input type="text" name="ink3" placeholder="3" required="true">
+                                    <input type="text" name="ink4" placeholder="4" required="true">
+                                    <input type="text" name="ink5" placeholder="5" required="true">
+                                    <input type="text" name="ink6" placeholder="6" required="true">
+                                    <input type="text" name="ink7" placeholder="7" required="true">
+                                    <input type="text" name="ink8" placeholder="8" required="true">
+                                    <input type="text" name="ink9" placeholder="9" required="true">
+                                    <input type="text" name="ink10" placeholder="10" required="true">
                                 </div>
                             </div>
                         </div>
