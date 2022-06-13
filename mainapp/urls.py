@@ -10,6 +10,9 @@ urlpatterns = [
     path('logout/', views.logout_user, name="logout"),
     #path('save-form/', views.save_form, name="save"),
     path('crear-cotizacion/', views.cotizacion, name="crear_cotizacion"),
-    path('save_cotizacion/', views.save_cotizacion, name='save')
+    path('save_cotizacion/', views.save_cotizacion, name='save'),
+    path('crear-articulo/<str:title>/<str:content>/<str:public>', views.crear_articulo, name="crear-articulo"),
+    path('articulo/', views.articulo, name="articulo"),
+    path('editar-articulo/<int:id>', views.editar_articulo)
     
 ]

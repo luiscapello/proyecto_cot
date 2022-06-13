@@ -1,15 +1,17 @@
 import email
+from turtle import title
 from unicodedata import name
+from urllib import response
 from webbrowser import get
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from sympy import content
 #from django.shortcuts import render
 from mainapp.forms import RegisterForm
-from mainapp.models import Cotizacion
-from django.db import models
+from mainapp.models import Cotizacion,Article
 
 
 # Create your views here.
@@ -25,7 +27,7 @@ def cotizacion(request):
 
     cotizacion = Cotizacion(
 
-            #date = '25/05/2022',
+            date = '25/05/2022',
             typeCo = 'nueva',
             folio = '2515',
             customerCode = '5416',
@@ -73,7 +75,7 @@ def cotizacion(request):
     )
     cotizacion.save()
 
-    return HttpResponse(f"Cotizacion creada: <strong>{cotizacion1.folio}</strong> - {cotizacion1.customers}")
+    return HttpResponse(f"Cotizacion creada: <strong>{cotizacion.folio}</strong> - {cotizacion.customers}")
 
 
 
@@ -174,13 +176,11 @@ def save_cotizacion(request):
         )
         cotizacion.save()
 
-        return HttpResponse(f"Cotizacion creada: <strong>{cotizacion1.folio}</strong> - {cotizacion1.customers}")
+        return HttpResponse(f"Cotizacion creada: <strong>{cotizacion.folio}</strong> - {cotizacion.customers}")
     
     else:
-        print("hola")
-        return HttpResponse("<h2> Nose ha podido guardar la cotización </h2>")
-        
     
+        return HttpResponse("<h2> Nose ha podido guardar la cotización </h2>")
 
 
 def Formulario(request):
@@ -192,8 +192,6 @@ def Formulario(request):
 
 
 def cotizaciones(request):
-
-    cotizacion = Cotizacion.objects.raw("SELECT * FROM mainapp_cotizacion ")
 
     return render(request, 'mainapp/cotizaciones.html', {
         'cotizaciónes': cotizaciones
@@ -224,5 +222,47 @@ def login_page(request):
     })
 
 def logout_user(request):
-    logout(request)
-    return redirect('login')
+        logout(request)
+        return redirect('login')
+
+def crear_articulo(request, title, content, public):
+
+    articulo = Article(
+        title = title,
+        content = content,
+        public = public
+    )
+    articulo.save()
+
+    return HttpResponse(f"Arculo creado: <strong>{articulo.title} - {articulo.content}</strong>")
+
+
+def articulo(request):
+
+    try:
+        articulo = Article.objects.get(title ="superman", public= False)
+        response = f"Articulo: <br/> {articulo.id} - {articulo.title}"
+    except:
+        response = "<h1>Articulo no encontrado: </h1>"
+
+    return HttpResponse(response)
+
+def editar_articulo(request, id):
+
+    articulo = Article.objects.get(pk=id)
+
+    articulo.title = "Batman"
+    articulo.content = "Pelicula del 2017"
+    articulo.public = True
+
+    articulo.save()
+
+    return HttpResponse(f"Arculo Editado: <strong>{articulo.title} - {articulo.content}</strong>")
+
+def articulos(request):
+
+    articulos = Article.objects.all()
+
+    return render(request, 'cotizaciones.html', {
+        'articulos': articulos
+    })
