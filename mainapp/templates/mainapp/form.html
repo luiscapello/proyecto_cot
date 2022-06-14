@@ -58,7 +58,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+
+
+                        {% comment %} <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     <strong>Datos Internos</strong>
@@ -147,7 +149,7 @@
                                 </button>
                             </h2>
                             <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
+                                <div class="accordion-body"> {% endcomment %}
 
                                     {% comment %} <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -159,7 +161,7 @@
                                             <li><button class="dropdown-item" type="button">Caja y Bolsa</button></li>
                                         </ul>
                                     </div> {% endcomment %}
-
+{% comment %} 
                                     <label for="delivery"># Entregas</label>
                                     <input id="delivery" type="text" name="delivery" required="true"/>
                                     <label for="place">Lugar de Entrega</label>
@@ -236,7 +238,7 @@
                     <dir>
                         <label for="note">Notas</label>
                         <textarea name="note" id="" cols="20" rows="10"></textarea>
-                    </dir>
+                    </dir> {% endcomment %}
 
                     {% comment %} <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
